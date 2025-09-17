@@ -23,11 +23,12 @@
 ## Деплой
 
 Проект доступен по ссылке:  
-[Деплой на Vercel]([https://your-project-name.vercel.app](https://astounding-starlight-c16523.netlify.app/))
+[Деплой на Vercel](https://astounding-starlight-c16523.netlify.app/)
+
 
 ## Репозиторий
 
 Исходный код на GitHub:  
-[GitHub Repository]([https://github.com/your-username/your-project-name](https://github.com/anna-sahradyan/Account-vue)
+[GitHub Repository](https://github.com/anna-sahradyan/Account-vue)
 ```vue
 <AccountForm />
