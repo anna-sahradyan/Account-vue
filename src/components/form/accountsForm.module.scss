@@ -1,0 +1,148 @@
+@use '/src/assets/variables' as v;
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto; /* горизонтальный скролл при узком экране */
+  -webkit-overflow-scrolling: touch;
+}
+
+.accountForm {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  table-layout: fixed;
+  color: v.$color-text;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: v.$spacing;
+  border-radius: v.$border-radius;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 300px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    th {
+      font-weight: 500;
+      background-color: #f8f8f8;
+    }
+
+    td {
+      input, select {
+        width: 100%;
+        padding: 6px 8px;
+        border-radius: v.$border-radius;
+        border: 1px solid v.$primary-color;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.passwordEye {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding-right: 40px; // запас справа под кнопку
+  }
+
+  button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.btnBox {
+  width: 200px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: v.$spacing;
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid v.$primary-color;
+    border-radius: v.$border-radius;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: v.$spacing;
+  svg {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
+  span::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+
+.actions {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+}
+
+.error {
+  border-color: v.$error-color;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.errorMsg {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  color: v.$error-color;
+  font-size: 12px;
+
+}
+
+

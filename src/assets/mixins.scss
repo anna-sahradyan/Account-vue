@@ -1,0 +1,10 @@
+@mixin inputStyle {
+  padding: $spacing;
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  font-size: $font-size;
+}
+
+@mixin errorStyle {
+  border-color: $error-color;
+}
